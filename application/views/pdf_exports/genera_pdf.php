@@ -660,6 +660,7 @@ table tr td {
        
         <td width="20%">
             <div class="company_logo_box">
+                <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents("./assets/logo/logo_empresa.png")) ?>" style="max-width: 150px;"/>
                 <!--<img src="<?php echo $_SERVER['DOCUMENT_ROOT']; ?>assets/logo/logo_empresa.png" class="company_logo" style="max-width: 150px;">
                 <img src="<?php echo $_SERVER["DOCUMENT_ROOT"].'/assets/logo/logo_empresa.png';?>"/>
                 <img src="<?php echo $_SERVER["DOCUMENT_ROOT"].'\assets/logo/logo_empresa.png';?>"/>
@@ -686,7 +687,7 @@ table tr td {
         </td>
         <td width="30%" class="border-box py-4 px-2 text-center">
             <h5 class="text-center"><?=$document?></h5>
-            <h3 class="text-center"><?=str_pad($reservation_id, 5, '0', STR_PAD_LEFT);?></h3>
+            <h3 class="text-center"><?="CR".date("Y")."-".str_pad($reservation_id, 5, '0', STR_PAD_LEFT);?></h3>
         </td>
     </tr>
 </table>
